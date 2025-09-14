@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 포트폴리오</title>
+
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Pretendard-Regular', sans-serif;
+            background-color: #141517;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #141517;
+            position: relative;
+        }
+        header h1 {
+            font-size: 1rem;
+            color: #fff;
+            font-size: 25px; /*없애는게 나음*/
+            padding-left: 250px;
+        }
+        .menu-toggle {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
+            padding-right: 250px;
+        }
+        .menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            background: #383838;
+            width: 350px;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1000;
+        }
+        p {
+            color: #fff;
+        }
+        .menu.active {
+            transform: translateX(0);
+        }
+        .main-image img {
+            width: 100%;
+            height: 670px;
+            object-fit: cover;
+            display: block;
+        }
+        section {
+            padding: 2rem;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        .section1-1 {
+            font-size: 30px;
+            padding-top: 100px;
+        }
+        .section2-1 {
+            font-size: 30px;
+            padding-top: 118px;
+        }
+        h2 {
+            color: #865BFF;
+            margin-bottom: 55px;
+            border-bottom: 1.5px solid #865BFF;
+            padding-bottom: 15px;
+            width: 1421px;
+        }
+        .cards {
+            display: flex;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 450px;
+            position: relative;
+        }
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 515px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: #313338;
+            display: block;
+        }
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .overlay a {
+            display: inline-block;
+            width: 130px;
+            height: 130px;
+            background-image: url('../image/돋보기.png'); /* 돋보기 이미지 */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .card-title {
+            font-weight: bold;
+            color: #fff;
+            margin-top: 25px;
+            font-size: 25px;
+            width: 357px;
+        }
+        .card-date {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #CBCBCB;
+        }
+        #delete{
+            color: #5e5e5e;
+        }
+        a {
+            text-decoration: none;  /* 밑줄 제거 */
+        }
+        .section2{
+          margin-bottom: 100px;
+        }
+        @media screen and (max-width: 768px) {
+        .card {
+                width: 100%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <a href="../index.html">
+        <h1>MINJOO PORTFOLIO</h1>
+      </a>
+      </header>
+
+      <div class="main-image">
+        <img src="../image/3_subvisual.png" alt="메인 이미지">
+      </div>
+
+      <section class="section1">
+        <h2 class="section1-1">게임 서비스 기획</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="image-container">
+              <img src="../image/3_tum_1.png">
+              <div class="overlay">
+                <a href="./shooting_pdf.html"></a>
+              </div>
+            </div>
+            <div class="card-title">슈팅게임 총기사전 [Shooting Wiki] 서비스 기획</div>
+            <div class="card-date">2025.03 - 2025.06</div>
+          </div>
+          <div class="card">
+            <div class="image-container">
+              <img src="../image/3_tum_2.png">
+              <div class="overlay">
+                <a href="./sudden_note_pdf.html"></a>
+              </div>
+            </div>
+            <div class="card-title">서든어택 병영수첩 리뉴얼</div>
+            <div class="card-date">2024.11 - 2025.02</div>
+          </div>
+          <div class="card">
+            <div class="image-container">
+              <img src="../image/3_tum_3.png">
+              <div class="overlay">
+                <a href="#"></a>
+              </div>
+            </div>
+            <div class="card-title" id="delete">준비 중 ..</div>
+            <!-- <div class="card-date">YYYY.MM~YYYY.MM</div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="section2">
+        <h2 class="section2-1">게임 프로젝트</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="image-container">
+              <img src="../image/3_tum_4.png">
+              <div class="overlay">
+                <a href="https://finalblow.netlify.app/pages/mainpage"></a>
+              </div>
+            </div>
+            <div class="card-title">하이퍼 FPS 게임 [FINAL BLOW] 게임 기획</div>
+            <div class="card-date">2024.01 - 2024.10</div>
+          </div>
+          <div class="card">
+            <div class="image-container">
+              <img src="../image/3_tum_5.png">
+              <div class="overlay">
+                <a href="./tmtm_pdf.html"></a>
+              </div>
+            </div>
+            <div class="card-title">유저 맞춤형 게임 파티 매칭 플랫폼 [TMTM] 기획&디자인</div>
+            <div class="card-date">2022.03 - 2022.11<br>(서울과학기술대학교 UX 졸업작품)</div>
+          </div>
+          <div class="card">
+            <div class="image-container">
+              <img src="../image/3_tum_6.png">
+              <div class="overlay">
+                <a href="./mistia_pdf.html"></a>
+              </div>
+            </div>
+            <div class="card-title">모바일 RPG 게임 [미스티아의 전설] 게임 기획</div>
+            <div class="card-date">2024.11 - (작업중)</div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
